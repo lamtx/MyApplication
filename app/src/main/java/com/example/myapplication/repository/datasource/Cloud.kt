@@ -16,7 +16,7 @@ class Cloud @Inject constructor(
 ) {
     suspend fun listArticles(): List<Article> {
         // simulate loading from the server
-        delay(500)
+        delay(1500)
         val json = context.resources.openRawResource(R.raw.sample_data_list).reader().use {
             it.readText()
         }

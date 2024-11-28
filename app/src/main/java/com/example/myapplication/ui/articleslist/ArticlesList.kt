@@ -1,11 +1,14 @@
 package com.example.myapplication.ui.articleslist
 
 import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
@@ -23,6 +26,7 @@ import com.example.myapplication.ui.common.ExceptionInfo
 import com.example.myapplication.ui.theme.Dimens
 import com.example.myapplication.ui.theme.horizontalSpacing
 import com.example.myapplication.ui.theme.itemTopSpacing
+import com.example.myapplication.ui.theme.wideItemTopSpacing
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalLayoutApi::class)
 @Composable
@@ -66,6 +70,19 @@ fun ArticlesList(
                             value = item,
                             selectedValue = state.sortBy,
                             onClick = { state.sort(item) }
+                        )
+                    }
+                }
+            }
+            if (state.isLoading) {
+                item {
+                    Box(
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .wideItemTopSpacing()
+                    ) {
+                        CircularProgressIndicator(
+                            modifier = Modifier.align(Alignment.Center)
                         )
                     }
                 }
