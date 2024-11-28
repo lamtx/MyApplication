@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="articles">Articles</string>
+    <string name="back">Back</string>
+    <string name="article_details">Article details</string>
+    <string name="message_server_error">We have a trouble to connect with the server, please try again later. Error code %1$d.</string>
+    <string name="message_no_connection">Network is not available! Please check your Internet connection and try again.</string>
+    <string name="delete">Delete</string>
+    <string name="delete_article">Delete article</string>
+    <string name="message_ask_for_deleting_article">Are you sure you want to delete this article?</string>
+    <string name="index">Index</string>
+    <string name="title">Title</string>
+    <string name="date">Date</string>
+    <string name="sort_by">Sort by</string>
+
+</resources>
